@@ -1,0 +1,7 @@
+Spring Boot :
+1. https://start.spring.io/
+2. dependencies: Web, H2, JPA
+3. Generate (zip file)
+4. Extract the zip file
+5. mvn clean install -DskipTests
+6. Import as Maven Project into your favorite IDE
