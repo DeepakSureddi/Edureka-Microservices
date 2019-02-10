@@ -7,12 +7,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.net.URI;
+
 import java.util.List;
 
 @RestController
 public class UserResource {
-
     private static final Logger LOGGER = LoggerFactory.getLogger(UserResource.class);
 
     private UserService userService;
@@ -36,22 +35,20 @@ public class UserResource {
 
     @PostMapping("/users")
     public ResponseEntity createUsers(@RequestBody User user) {
-        LOGGER.info("User Resource create user called");
+        LOGGER.info("User Resource getSingleUser called");
         userService.createUser(user);
-        return ResponseEntity.created(URI.create("")).build();
+        return ResponseEntity.created(null).build();
     }
 
     @DeleteMapping("/users/{userId}")
     public ResponseEntity deleteUsers(@PathVariable Long userId) {
-        LOGGER.info("User Resource delete user called");
+        LOGGER.info("User Resource getSingleUser called");
         userService.deleteUser(userId);
         return ResponseEntity.ok().build();
     }
 
-    @PostMapping("/updateUser")
-    public ResponseEntity updateUser(@RequestBody User user){
-        LOGGER.info("User Resource update user called");
-        userService.updateUser(user);
-        return ResponseEntity.ok().build();
+    @GetMapping("/orders")
+    public  Object getAllOrders() {
+        return userService.getAllOrders();
     }
 }
