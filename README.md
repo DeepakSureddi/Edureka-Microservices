@@ -22,6 +22,8 @@ Then go to your localhost url/h2-console and login with sa user
 In your application.properties file add
 spring.h2.console.enabled=true
 
+# Service Discovery
+# Richardson Maturity Model final level
 #Day2
 Added spring data rest  for reducing the code for CRUD fuctionality.
 Added spring fox data rest maven as 2.9 has bug for spring data rest.
