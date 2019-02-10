@@ -1,8 +1,6 @@
 package com.edureka.userms.service;
 
 import com.edureka.userms.model.User;
-import org.springframework.http.ResponseEntity;
-
 import java.util.List;
 
 public interface UserService {
