@@ -22,6 +22,8 @@ Then go to your localhost url/h2-console and login with sa user
 In your application.properties file add
 spring.h2.console.enabled=true
 
+H2-Console-url: jdbc:h2:mem:testdb
+
 # Service Discovery
 # Richardson Maturity Model final level
 #Day2
