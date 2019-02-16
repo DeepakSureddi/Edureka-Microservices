@@ -6,4 +6,9 @@ Spring Boot :
 5. mvn clean install -DskipTests
 6. Import as Maven Project into your favorite IDE
 
+H2-Console-url: jdbc:h2:mem:testdb
+
 Richardson Maturity Model: https://martinfowler.com/articles/richardsonMaturityModel.html
+
+Spring Data:
+https://docs.spring.io/spring-data/jpa/docs/current/reference/html/
