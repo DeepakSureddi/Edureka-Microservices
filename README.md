@@ -35,16 +35,16 @@ microservices which uses RIBBON ie. Round Robin algorithm for client
 Requests. Also, discussed on Resilience and Chaos Monkey used to test
 Resilience in Microservices.
 
-Day 3rd
+Day 3rd:\n
 Discussed on client server communication
 Stateful: Sticky session- use load balancer and Session replication- to replicate each session to available instances
 it limmits scability
-Stateless: request itself contains all information. nothing stored in server or server doesnot store state of client. Handled by Authorization server which will act as gateway
+Stateless: request itself contains all information. nothing stored in server or server doesnot store state of client. Handled by Authorization server which will act as gateway\n
 
-Communication style:
+Communication style:\n
 one to one- only one consumer e.g queue one consumer for one message
 ont to many- more than one consumer each receiver receives same message e.g Topic pub/sub model
-
+\n
 API Gateway/Zuul Proxy: act as proxy server/url hiding/security
 Actuator: it helps in managing endpoints localhost/actuator/routes to get all routing paths from api gateway
 
