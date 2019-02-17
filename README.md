@@ -46,8 +46,8 @@ Stateless: request itself contains all information. nothing stored in server or 
 
 Communication style:
 
-one to one- only one consumer e.g queue one consumer for one message
-ont to many- more than one consumer each receiver receives same message e.g Topic pub/sub model
+one to one- only one consumer e.g queue one consumer for one message.
+one to many- more than one consumer each receiver receives same message e.g Topic pub/sub model
 
 
 API Gateway/Zuul Proxy: act as proxy server/url hiding/security
