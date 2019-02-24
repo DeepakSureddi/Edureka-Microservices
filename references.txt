@@ -12,3 +12,23 @@ Richardson Maturity Model: https://martinfowler.com/articles/richardsonMaturityM
 
 Spring Data:
 https://docs.spring.io/spring-data/jpa/docs/current/reference/html/
+
+Saga Pattern+Event Driven:
+https://microservices.io/patterns/data/saga.html
+https://martinfowler.com/articles/201701-event-driven.html
+https://www.slideshare.net/arafkarsh/microservices-architecture-part-2-event-sourcing-and-saga
+
+DDD books:
+https://www.amazon.in/Implementing-Domain-Driven-Design-Vernon/dp/9332545480?tag=googinhydr18418-21&tag=googinkenshoo-21&ascsubtag=_k_CjwKCAiAqaTjBRAdEiwAOdx9xl-rfUe_9KeVgU-_r8TS-xEbtFaYyXpHRq7HVCaxdfxfVy3rYXWGiBoCfJsQAvD_BwE_k_&gclid=CjwKCAiAqaTjBRAdEiwAOdx9xl-rfUe_9KeVgU-_r8TS-xEbtFaYyXpHRq7HVCaxdfxfVy3rYXWGiBoCfJsQAvD_BwE
+
+https://www.amazon.in/Domain-Driven-Tacking-Complexity-Software/dp/8131724468?tag=googinhydr18418-21&tag=googinkenshoo-21&ascsubtag=_k_CjwKCAiAqaTjBRAdEiwAOdx9xliv_nni3b3IxgDRJeIIgZSCRorEDd7Le7BvyqR6XS7PzRBWFkYP8RoCr8kQAvD_BwE_k_&gclid=CjwKCAiAqaTjBRAdEiwAOdx9xliv_nni3b3IxgDRJeIIgZSCRorEDd7Le7BvyqR6XS7PzRBWFkYP8RoCr8kQAvD_BwE
+
+Hystrix properties:
+https://github.com/Netflix/Hystrix/wiki/Configuration
+
+ActivMQ:
+http://activemq.apache.org/download.html
+goto activemq extracted bin folder--> activmq start
+http://127.0.0.1:8161/admin
+username: admin
+password: admin

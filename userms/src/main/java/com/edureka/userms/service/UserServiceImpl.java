@@ -2,6 +2,7 @@ package com.edureka.userms.service;
 
 import com.edureka.userms.model.User;
 import com.edureka.userms.repository.UserRepository;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -45,8 +46,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @HystrixCommand(fallbackMethod = "getAllOrdersFromCache")
     public Object getAllOrders() {
         Object orders = restTemplate.getForObject("http://orderms/orders", Object.class);
         return orders;
+    }
+
+    private Object getAllOrdersFromCache() {
+        return "Orderms is not responsive";
     }
 }
