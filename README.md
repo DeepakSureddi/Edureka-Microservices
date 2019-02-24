@@ -53,6 +53,25 @@ one to many- more than one consumer each receiver receives same message e.g Topi
 API Gateway/Zuul Proxy: act as proxy server/url hiding/security
 Actuator: it helps in managing endpoints localhost/actuator/routes to get all routing paths from api gateway
 
+
+#Day 4
+Transaction Management:
+Issue: If one transaction is not completed the dependent transaction will be rolled back. (when write transactions)
+
+Solution:
+1.	Every transaction as single synchronous commit. 
+2.	One microservice will be primary handler for the transaction. (It will make asynchronous call to all places, it plays a role like a commander. Microservices makes changes without commit and sent back acknowledgement and primary handler send the commit command if it receives acknowledgement from all microservices.) It is also called as two phase commit. If no successful acknowledgement, then it will send rollback but prior to that it will also make retries.
+3.	Idempontence: Eventual committing. End result should be same. Use message JMS/Broker for all transaction. 
+4.	SAGA Pattern: Mostly used and efficient solution. 
+Go to here to learn about it:
+https://microservices.io/patterns/data/saga.html
+https://martinfowler.com/articles/201701-event-driven.html
+https://www.slideshare.net/arafkarsh/microservices-architecture-part-2-event-sourcing-and-saga
+
+Two problems:
+a.	Business Failure: We don’t do retry. E.g. Insufficient fund
+b.	Technical Failure: We do retry. E.g. Network failure. Three retries done.
+
 #ActiveMQ
 
 
@@ -72,4 +91,26 @@ username: admin
 password: admin
 
 once commandms deployed goto http://localhost:8989/messages/<your message here> This message will be queued in commandms to be send to activemq_1 and activemq_2. Once they are  up they will listen to the message and will be dequeued/comsumed by receiver activemqs.
+
+DDD(Domain Driven Development)
+Context: Different module in your application which will map to each microservices. It is general description of group of concepts. 
+Attached some screenshots in Screenshots package. 
+
+#Hystrix: When one of your microservices is down Hystrix will play a role as circuit breaker pattern. It makes your service calls more resilient by keeping track of each endpoint’s status. Normally, when you face expensive request timeouts when an endpoint becomes unavailable. It saves you from such timeouts by “breaking” the connection to the endpoint (this is why Hystrix is called a “circuit breaker”). It then reports that the service as unavailable so that subsequent requests don’t run into the same timeouts. Hystrix then continues to poll the service in the background to see when it’s available again. (But generally the service will be up within 15-20 mins due to automated system.)
+
+
+Database design Recall:
+Three types of design:
+a.	Single DB Single Schema different Tables
+b.	Single DB different Schema
+c.	Different DB 
+Aggregator- Here join on tables are done in microservice level. It will get data from all micorservices required and combines and return the result. 
+
+Moving from Monolith to Microservices
+a.	Big Bang (From Day 1: Never go for this approach)
+b.	Gradual (Netflix is one successful big company to use this approach)
+
+How will you not break the contract between the services?
+(No code share but share a contract)
+(*Create view object as immutable which is read only and client who access it cannot modify. It can be versioned. Client can choose which version to use. The Microservice should support backward compatibility if it is versioned)
 
