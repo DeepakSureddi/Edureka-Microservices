@@ -32,3 +32,13 @@ goto activemq extracted bin folder--> activmq start
 http://127.0.0.1:8161/admin
 username: admin
 password: admin
+
+OAUTH 2 urls:
+
+curl -X POST -d grant_type=client_credentials http://candy:123@localhost:9000/oauth/token
+
+curl edureka:123@localhost:9000/oauth/token -d grant_type=password -d username=ricardo -d password=123
+
+curl -X GET http://localhost:9090/dummy/users -v -H "Authorization: Bearer 0a96119a-d2dd-4686-9ff9-69657bc71ab7"
+
+curl -x POST -d grant_type=password -d username=ricardo -d password=123 http://edureka:123@localhost:9000/oauth/token
