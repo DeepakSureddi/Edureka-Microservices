@@ -90,7 +90,7 @@ http://127.0.0.1:8161/admin
 username: admin
 password: admin
 
-once commandms deployed goto http://localhost:8989/messages/<your message here> This message will be queued in commandms to be send to activemq_1 and activemq_2. Once they are  up they will listen to the message and will be dequeued/comsumed by receiver activemqs.
+once commandms deployed goto http://localhost:8989/messages/<your message here> This message will be queued in commandms to be send to activemq_1 and activemq_2. Once they are  up they will listen to the message and will be dequeued/comsumed by receiver activemqs. It uses TCP/UDP transfer protocol(UDP (User Datagram Protocol) is an alternative communications protocol to Transmission Control Protocol (TCP) used primarily for establishing low-latency and loss-tolerating connections between applications on the internet).
 
 DDD(Domain Driven Development)
 Context: Different module in your application which will map to each microservices. It is general description of group of concepts. 
