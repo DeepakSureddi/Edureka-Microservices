@@ -53,3 +53,20 @@ one to many- more than one consumer each receiver receives same message e.g Topi
 API Gateway/Zuul Proxy: act as proxy server/url hiding/security
 Actuator: it helps in managing endpoints localhost/actuator/routes to get all routing paths from api gateway
 
+#ActiveMQ
+
+
+ActivMQ:
+http://activemq.apache.org/download.html
+goto activemq extracted bin folder--> activmq start
+for mac start command: ./activemq start and you will get follwing info:
+
+INFO: Loading '/Users/apiltiwari/Downloads/apache-activemq-5.15.8//bin/env'
+INFO: Using java '/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/bin/java'
+INFO: Starting - inspect logfiles specified in logging.properties and log4j.properties to get details
+INFO: pidfile created : '/Users/apiltiwari/Downloads/apache-activemq-5.15.8//data/activemq.pid' (pid '17189')
+
+
+http://127.0.0.1:8161/admin
+username: admin
+password: admin
