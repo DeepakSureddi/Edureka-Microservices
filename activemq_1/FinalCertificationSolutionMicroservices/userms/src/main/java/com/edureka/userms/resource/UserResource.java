@@ -36,28 +36,20 @@ public class UserResource {
 
     @PostMapping("/users")
     public ResponseEntity createUsers(@RequestBody User user) {
-        LOGGER.info("User Resource create user called");
+        LOGGER.info("User Resource getSingleUser called");
         userService.createUser(user);
         return ResponseEntity.created(URI.create("")).build();
     }
 
     @DeleteMapping("/users/{userId}")
     public ResponseEntity deleteUsers(@PathVariable Long userId) {
-        LOGGER.info("User Resource delete user called");
+        LOGGER.info("User Resource getSingleUser called");
         userService.deleteUser(userId);
-        return ResponseEntity.ok().build();
-    }
-
-    @PostMapping("/user")
-    public ResponseEntity updateUser(@RequestBody User user){
-        userService.updateUser(user);
-        LOGGER.info("User Resource update called");
         return ResponseEntity.ok().build();
     }
 
     @GetMapping("/orders")
     public ResponseEntity getAllOrders() {
-        LOGGER.info("User Resource get all orders called");
         return userService.getAllOrders();
     }
 }
